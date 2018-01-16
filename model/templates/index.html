@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Material Design Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/104946/animate.min.css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   
+
+</head>
+
+<body>    
+
+<h1 class="title">Soccer chatbot</h1>
+<div class="wrapper">
+              <nav class="nav" id="nav">
+                <div class="default-nav">
+                  <div class="main-nav">
+                    <div class="toggle"></div>
+                    <div class="main-nav-item"><a class="main-nav-item-link" href="#">Bot</a></div>
+                    <div class="options"></div>
+                    <div class="content" id="content"></div>
+                    </div>
+                    </div>
+               </nav>
+  
+                <div class="inner" id="inner">
+                    <div class="content" id="content">
+
+                       {% for post in posts %}
+                       <div class="message-wrapper me">
+                              <div class="circle-wrapper animated bounceIn"></div>
+                              <div class="text-wrapper animated fadeIn">{{post.message}}</div>
+                            
+                       </div>
+
+                        <div class="message-wrapper them">
+                              <div class="circle-wrapper animated bounceIn"></div>
+                              <div class="text-wrapper animated fadeIn">{{post.answer}}</div>
+                            
+
+                        </div>
+                        {% endfor %}
+                    
+
+                    </div>
+
+                </div>
+                
+                    <form class="bottom" action = "http://localhost:5000/chat" method = "GET">     
+                            <p><input class = "input" type = "text" name="message" autofocus/></p>
+                            <p><input class="send" type = "submit" value=""/></p>  
+                        
+                    </form>
+ 
+</div>
+    <script>
+        var objDiv = document.getElementById("inner");
+        objDiv.scrollTop = objDiv.scrollHeight;
+    </script>
+</body>
+</html>
+
+
+
