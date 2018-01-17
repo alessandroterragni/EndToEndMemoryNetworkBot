@@ -1,10 +1,12 @@
-# EndToEndMemoryNetworkBot
+# Using End to End Memory Networks for task oriented dialog systems
 
 Data Mining Seminar
 
 Alessandro Terragni
 
 Supervisor: Mykola Pechenizkiy
+
+To have a complete overview of the project, read the pdf attached.
 
 ## Data generator
 This code generates a labelled dialogue dataset conforming to the The (6) dialog bAbI tasks database (https://research.fb.com/downloads/babi/), but on a soccer training recommendation app.
