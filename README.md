@@ -75,3 +75,7 @@ Then just do:
 • Flask
 • nltk
 • six
+
+## Credits
+- https://github.com/domluna/memn2n
+- https://github.com/voicy-ai/DialogStateTracking
