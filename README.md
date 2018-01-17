@@ -68,3 +68,10 @@ Then just do:
     python3 main.py --infer
 
 
+## Dependencies
+• Python3 • tensorflow • numpy
+• scipy
+• sklearn
+• Flask
+• nltk
+• six
